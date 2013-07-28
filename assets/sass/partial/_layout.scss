@@ -1,0 +1,79 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles */
+
+/* #Site Styles
+================================================== */
+body {
+	background: #ecf0f1 image-url('pattern.png') repeat;
+}
+
+a {
+	color: #2c3e50;
+	text-decoration: none;
+	&:hover {
+		color: #e74c3c;
+	}
+}
+
+/* #Page Styles
+================================================== */
+.head {
+	text-align: center;
+	
+}
+	.head__title {
+		margin: 25px 0;
+		text-transform: uppercase;
+	}
+	.head__cover {
+		background: image-url('cover.jpg') no-repeat bottom center;
+		position: relative;
+		height: 250px;
+		@include single-box-shadow(#000, 0, -20px, 150px, 0, inset);
+	}
+		.head__navigation {
+			background: rgba(#FFF, .8);
+			padding: 1em 0;
+			position: absolute;
+			right: 0; bottom: 0; left: 0;
+
+			> a {
+				font-size: 1.2em;
+				margin-right: 1em;
+				padding: .8em;
+				&:last-child {
+					margin: 0;
+				}
+				&:hover, &.current {
+					border-bottom: 2px solid #e74c3c;
+				}
+					&.current {
+						color: #e74c3c;
+					}
+			}
+		}
+
+.content {
+	font-size: 1.6em;
+	padding: 2em 0;
+}
+	.post__title {
+		float: left;
+	}
+	.post__date {
+		float: right;
+		font-weight: normal;
+		line-height: 50px;
+		text-transform: uppercase;
+	}
