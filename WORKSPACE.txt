@@ -1,15 +1,22 @@
 <NotepadPlus>
     <Project name="fyianlai.com">
         <Folder name="assets">
-            <Folder name="css" />
+            <Folder name="css">
+                <File name="assets\css\application.css" />
+            </Folder>
             <Folder name="img">
                 <File name="assets\img\apple-touch-icon-114x114.png" />
                 <File name="assets\img\apple-touch-icon-72x72.png" />
                 <File name="assets\img\apple-touch-icon.png" />
+                <File name="assets\img\cover.JPG" />
                 <File name="assets\img\favicon.ico" />
+                <File name="assets\img\pattern.png" />
             </Folder>
             <Folder name="js">
-                <File name="assets\js\modernizr.js" />
+                <Folder name="vendor">
+                    <File name="assets\js\vendor\modernizr.js" />
+                </Folder>
+                <File name="assets\js\application.js" />
             </Folder>
             <Folder name="sass">
                 <Folder name="partial">
@@ -22,10 +29,21 @@
                         <File name="assets\sass\vendor\skeleton\_grid.scss" />
                     </Folder>
                 </Folder>
-                <File name="assets\sass\_application.scss" />
+                <File name="assets\sass\application.scss" />
             </Folder>
         </Folder>
+        <Folder name="posts">
+            <File name="posts\building-a-new-home.md" />
+            <File name="posts\i-dont-care-really.md" />
+        </Folder>
+        <Folder name="tpl">
+            <File name="tpl\index.html" />
+            <File name="tpl\post.html" />
+        </Folder>
+        <File name=".gitignore" />
         <File name="config.rb" />
         <File name="index.html" />
+        <File name="posts.json" />
+        <File name="WORKSPACE.txt" />
     </Project>
 </NotepadPlus>
