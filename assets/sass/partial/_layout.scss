@@ -9,114 +9,114 @@
 
 /* Table of Content
 ==================================================
-	#Site Styles
-	#Page Styles */
+    #Site Styles
+    #Page Styles */
 
 /* #Site Styles
 ================================================== */
 body {
-	background: #ecf0f1 image-url('pattern.png') repeat;
+    background: #ecf0f1 image-url('pattern.png') repeat;
 }
 
 a {
-	color: #2c3e50;
-	text-decoration: none;
-	&:hover {
-		color: #e74c3c;
-	}
+    color: #2c3e50;
+    text-decoration: none;
+    &:hover {
+        color: #e74c3c;
+    }
 }
 
 ::-moz-selection {
-	background: lighten(#e74c3c, 16%);
-	text-shadow: none;
+    background: lighten(#e74c3c, 16%);
+    text-shadow: none;
 }
 
 ::selection {
-	background: lighten(#e74c3c, 16%);
-	text-shadow: none;
+    background: lighten(#e74c3c, 16%);
+    text-shadow: none;
 }
 
 /* #Page Styles
 ================================================== */
 .head {
-	padding-top: 25px;
-	text-align: center;
+    padding-top: 25px;
+    text-align: center;
 }
-	.head__title {
-		margin-bottom: 25px;
-		text-transform: uppercase;
-	}
-	.head__cover {
-		background: image-url('cover.jpg') no-repeat bottom center;
-		position: relative;
-		height: 250px;
-		@include single-box-shadow(#000, 0, -20px, 150px, 0, inset);
-	}
-		.head__navigation {
-			background: rgba(#FFF, .7);
-			padding: 1em 0;
-			position: absolute;
-			right: 0; bottom: 0; left: 0;
-			z-index: 1337;
-			@include single-transition();
+    .head__title {
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    .head__cover {
+        background: image-url('cover.jpg') no-repeat bottom center;
+        position: relative;
+        height: 250px;
+        @include single-box-shadow(#000, 0, -20px, 150px, 0, inset);
+    }
+        .head__navigation {
+            background: rgba(#FFF, .7);
+            padding: 1em 0;
+            position: absolute;
+            right: 0; bottom: 0; left: 0;
+            z-index: 1337;
+            @include single-transition();
 
-			&:hover {
-				background: rgba(#FFF, .8);
-			}
+            &:hover {
+                background: rgba(#FFF, .8);
+            }
 
-			> a {
-				font-size: 1.2em;
-				margin-right: 1em;
-				padding: .8em;
-				&:last-child {
-					margin: 0;
-				}
-				&:hover, &.active {
-					border-bottom: 2px solid #e74c3c;
-				}
-					&.active {
-						color: #e74c3c;
-					}
-			}
-		}
-		.head__navigation--fixed {
-			background: rgba(#000, .7);
-			top: 0; bottom: auto;
-			position: fixed;
-			a { 
-				color: #ecf0f1;
-				&:hover {
-					color: #e74c3c;
-				}
-			}
-			&:hover {
-				background: rgba(#000, .8);
-			}
-		}
+            > a {
+                font-size: 1.2em;
+                margin-right: 1em;
+                padding: .8em;
+                &:last-child {
+                    margin: 0;
+                }
+                &:hover, &.active {
+                    border-bottom: 2px solid #e74c3c;
+                }
+                    &.active {
+                        color: #e74c3c;
+                    }
+            }
+        }
+        .head__navigation--fixed {
+            background: rgba(#000, .7);
+            top: 0; bottom: auto;
+            position: fixed;
+            a { 
+                color: #ecf0f1;
+                &:hover {
+                    color: #e74c3c;
+                }
+            }
+            &:hover {
+                background: rgba(#000, .8);
+            }
+        }
 
 .content {
-	font-size: 1.6em;
-	line-height: 1.6em;
-	padding: 2em 0;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    padding: 2em 0;
 }
-	.post {
-		a {
-			text-decoration: underline;
-		}
-	}
-		.post__prev {
-			text-align: left;
-		}
-		.post__next {
-			float: right !important;
-			text-align: right;
-		}
-	.post__title {
-		float: left;
-	}
-	.post__date {
-		float: right;
-		font-weight: normal;
-		line-height: 40px;
-		text-transform: uppercase;
-	}
+    .post {
+        a {
+            text-decoration: underline;
+        }
+    }
+        .post__prev {
+            text-align: left;
+        }
+        .post__next {
+            float: right !important;
+            text-align: right;
+        }
+    .post__title {
+        float: left;
+    }
+    .post__date {
+        float: right;
+        font-weight: normal;
+        line-height: 40px;
+        text-transform: uppercase;
+    }

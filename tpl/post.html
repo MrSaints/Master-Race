@@ -1,23 +1,23 @@
 <div class="post" ng-bind-html="content"></div>
 <div class="row">
-	<div class="eight columns alpha post__prev" ng-hide="!previousPost">
-		<h4>
-			<a href="#{{previousPost.time | date: 'yyyy'}}/{{previousPost.slug}}/">
-				{{previousPost.title}}
-			</a>
-		</h4>
-		<h5>
-			{{previousPost.time | timeago}}
-		</h5>
-	</div>
-	<div class="eight columns omega post__next" ng-hide="!nextPost">
-		<h4>
-			<a href="#{{nextPost.time | date: 'yyyy'}}/{{nextPost.slug}}/">
-				{{nextPost.title}}
-			</a>
-		</h4>
-		<h5>
-			{{nextPost.time | timeago}}
-		</h5>
-	</div>
+    <div class="eight columns alpha post__prev" ng-hide="!previousPost">
+        <h4>
+            <a href="#{{previousPost.time | date: 'yyyy'}}/{{previousPost.slug}}/">
+                {{previousPost.title}}
+            </a>
+        </h4>
+        <h5>
+            {{previousPost.time | timeago}}
+        </h5>
+    </div>
+    <div class="eight columns omega post__next" ng-hide="!nextPost">
+        <h4>
+            <a href="#{{nextPost.time | date: 'yyyy'}}/{{nextPost.slug}}/">
+                {{nextPost.title}}
+            </a>
+        </h4>
+        <h5>
+            {{nextPost.time | timeago}}
+        </h5>
+    </div>
 </div>
