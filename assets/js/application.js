@@ -9,6 +9,8 @@ home.config(['$routeProvider', function($routeProvider) {
         when('/', {templateUrl: 'tpl/index.html',   controller: IndexCtrl}).
         when('/:year/:slug', {templateUrl: 'tpl/post.html', controller: PostCtrl}).
         otherwise({redirectTo: '/404'});
+}]).config(['$httpProvider', function($httpProvider) {
+    $httpProvider.responseInterceptors.push('httpInterceptor');
 }]);
 
 /*
@@ -26,6 +28,20 @@ home.filter('timeago', function() {
  */
 home.factory('posts', function($http) {
     return $http.get('posts.json');
+});
+home.factory('httpInterceptor', function ($q, $location) {
+    return function(promise) {
+        // Success
+        return promise.then(function(response) {
+            return response;
+        }, function(response) {
+            // Error
+            if (response.status === 404) {
+                $location.path('/404');
+            }
+            return $q.reject(response);
+        });
+    }
 });
 
 /*
