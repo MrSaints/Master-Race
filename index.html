@@ -39,41 +39,41 @@
 </head>
 
 <body>
-<!-- Primary Page Layout
-================================================== -->
-<header class="head fix-nav">
-    <h1 class="head__title"><a href="#">Ian Lai</a></h1>
-    <div class="head__cover">
-        <nav class="head__navigation">
-            <a href="#about">About</a> 
-            <a href="#">Blog</a> 
-            <a href="#projects">Projects</a> 
-        </nav>
+    <!-- Primary Page Layout
+    ================================================== -->
+    <header class="head fix-nav">
+        <h1 class="head__title"><a href="#">Ian Lai</a></h1>
+        <div class="head__cover">
+            <nav class="head__navigation">
+                <a href="#about">About</a> 
+                <a href="#">Blog</a> 
+                <a href="#projects">Projects</a> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="container content">
+        <div class="sixteen columns animation-wrapper" ng-view></div>
     </div>
-</header>
 
-<div class="container content">
-	<div class="sixteen columns" ng-view></div>
-</div>
+    <!-- End Document
+    ================================================== -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/application.js"></script>
 
-<!-- End Document
-================================================== -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-5243796-6']);
+        _gaq.push(['_setDomainName', 'fyianlai.com']);
+        _gaq.push(['_trackPageview']);
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-5243796-6']);
-    _gaq.push(['_setDomainName', 'fyianlai.com']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </body>
 </html>
