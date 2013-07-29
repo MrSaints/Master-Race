@@ -14,8 +14,15 @@
 
 /* #Site Styles
 ================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
 body {
     background: #ecf0f1 image-url('pattern.png') repeat;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
 }
 
 a {
@@ -30,7 +37,6 @@ a {
     background: lighten(#e74c3c, 16%);
     text-shadow: none;
 }
-
 ::selection {
     background: lighten(#e74c3c, 16%);
     text-shadow: none;
@@ -39,11 +45,9 @@ a {
 /* #Page Styles
 ================================================== */
 .head {
-    padding-top: 25px;
     text-align: center;
 }
     .head__title {
-        margin-bottom: 25px;
         text-transform: uppercase;
     }
     .head__cover {
@@ -54,6 +58,7 @@ a {
     }
         .head__navigation {
             background: rgba(#FFF, .7);
+            font-size: .75em;
             padding: 1em 0;
             position: absolute;
             right: 0; bottom: 0; left: 0;
@@ -65,7 +70,6 @@ a {
             }
 
             > a {
-                font-size: 1.2em;
                 margin-right: 1em;
                 padding: .8em;
                 &:last-child {
@@ -95,28 +99,36 @@ a {
         }
 
 .content {
-    font-size: 1.6em;
     line-height: 1.6em;
     padding: 2em 0;
 }
-    .post {
-        a {
-            text-decoration: underline;
-        }
-    }
-        .post__prev {
-            text-align: left;
-        }
-        .post__next {
-            float: right !important;
-            text-align: right;
-        }
-    .post__title {
-        float: left;
-    }
-    .post__date {
-        float: right;
-        font-weight: normal;
-        line-height: 40px;
+    .content--date {
+        font-weight: 200;
         text-transform: uppercase;
     }
+
+    .page, .post {
+        margin-bottom: 30px;
+        a { text-decoration: underline; }
+    }
+        .more__title, .more__time {
+            margin: .5em 0;
+        }
+            .post__next {
+                float: right !important;
+                text-align: right;
+            }
+
+    .posts {
+        padding: 0;
+    }
+        .post-item {
+            margin: 1.5em 0;
+        }
+    .post__title, .post__date {
+        line-height: 40px;
+        margin: 0;
+    }
+        .post__date {
+            text-align: right;
+        }

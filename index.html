@@ -8,16 +8,18 @@
     ================================================== -->
     <meta charset="utf-8">
 
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="//themes.googleusercontent.com">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//ajax.googleapis.com">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ian Lai</title>
+    <title ng-controller="TitleCtrl" ng-bind-html="title.getTitle()">Ian Lai</title>
     <meta name="description" content="">
     <meta name="author" content="Ian Lai (MrSaints)">
 
     <meta name="fragment" content="!">
+    <base href="/fyianlai.com/">
 
     <!-- Mobile Specific Metas
     ================================================== -->
@@ -25,12 +27,12 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700">
     <link rel="stylesheet" href="assets/css/application.css">
 
     <!-- JavaScript
     ================================================== -->
-    <script src="assets/js/vendor/modernizr.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
     <!-- Favicons
     ================================================== -->
@@ -47,9 +49,9 @@
         <h1 class="head__title"><a href="#">Ian Lai</a></h1>
         <div class="head__cover">
             <nav class="head__navigation">
-                <a href="#about">About</a> 
+                <a href="about">About</a> 
                 <a href="#">Blog</a> 
-                <a href="#projects">Projects</a> 
+                <a href="projects">Projects</a> 
             </nav>
         </div>
     </header>
