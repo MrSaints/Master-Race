@@ -1,19 +1,19 @@
 var showdown = new Showdown.converter();
 var home = angular.module('home', ['ngSanitize']);
 
-var $defaultTitle = 'Ian Lai';
-var $maxPosts = 10;
-
 /*
  * Config
  */
+var $defaultTitle = 'Ian Lai';
+var $maxPosts = 10;
+
 home.config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.
-        when('/', {templateUrl: 'tpl/index.html',   controller: IndexCtrl}).
-        when('/about', {templateUrl: 'tpl/about.html',   controller: AboutCtrl}).
-        when('/404', {templateUrl: 'tpl/404.html',   controller: NotFoundCtrl}).
-        when('/:page', {templateUrl: 'tpl/index.html',   controller: BlogCtrl}).
-        when('/:year/:slug', {templateUrl: 'tpl/post.html', controller: PostCtrl}).
+        when('/', {templateUrl: '_tpl/index.html',   controller: IndexCtrl}).
+        when('/about', {templateUrl: '_tpl/about.html',   controller: AboutCtrl}).
+        when('/404', {templateUrl: '_tpl/404.html',   controller: NotFoundCtrl}).
+        when('/:page', {templateUrl: '_tpl/index.html',   controller: BlogCtrl}).
+        when('/:year/:slug', {templateUrl: '_tpl/post.html', controller: PostCtrl}).
         otherwise({redirectTo: '/404'});
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
