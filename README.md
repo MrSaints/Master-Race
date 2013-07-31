@@ -1,4 +1,7 @@
-beta.fyianlai.com
-=================
+Master Race
+===========
 
-A simple, static and blog-aware personal web site inspired by Jekyll and powered by steroids #masterrace
+A work in progress.
+
+A simple, static and blog-aware platform developed for my personal web site.
+It was inspired by Jekyll and it is powered by steroids #masterrace
