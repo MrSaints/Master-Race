@@ -1,5 +1,5 @@
 <ul class="posts">
-    <li class="row post-item" ng-repeat="post in posts | orderBy:'time':true | limitTo: 10">
+    <li class="row post-item" ng-repeat="post in posts | orderBy:'time':true | limitTo: max">
         <div class="twelve columns alpha">
             <h2 class="post__title">
                 <a href="{{post.time | date: 'yyyy'}}/{{post.slug}}/">{{post.title}}</a>

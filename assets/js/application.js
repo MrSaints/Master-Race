@@ -1,6 +1,8 @@
 var showdown = new Showdown.converter();
 var home = angular.module('home', ['ngSanitize']);
+
 var $defaultTitle = 'Ian Lai';
+var $maxPosts = 10;
 
 /*
  * Config
@@ -9,6 +11,8 @@ home.config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.
         when('/', {templateUrl: 'tpl/index.html',   controller: IndexCtrl}).
         when('/about', {templateUrl: 'tpl/about.html',   controller: AboutCtrl}).
+        when('/404', {templateUrl: 'tpl/404.html',   controller: NotFoundCtrl}).
+        when('/:page', {templateUrl: 'tpl/index.html',   controller: BlogCtrl}).
         when('/:year/:slug', {templateUrl: 'tpl/post.html', controller: PostCtrl}).
         otherwise({redirectTo: '/404'});
     $locationProvider.html5Mode(true);
@@ -70,9 +74,25 @@ function TitleCtrl ($scope, title) {
 
 function IndexCtrl ($scope, title, posts) {
     title.setTitle($defaultTitle);
+    $scope.max = $maxPosts;
     $scope.posts = [];
     posts.success(function(data) {
         $scope.posts = data;
+    });
+}
+
+function BlogCtrl ($scope, $routeParams, $location, title, posts) {
+    if (isNaN($routeParams.page))
+        $location.path('/404');
+
+    title.prependDefault('Page ' + $routeParams.page + ' &ndash; Blog');
+    $scope.max = $maxPosts;
+    $scope.posts = [];
+    posts.success(function(data) {
+        $scope.posts = data.slice(($routeParams.page - 1) * $maxPosts);
+
+        if ($scope.posts.length === 0)
+            $location.path('/404');
     });
 }
 
@@ -80,14 +100,16 @@ function AboutCtrl ($scope, title) {
     title.prependDefault('About');
 }
 
-function PostCtrl ($scope, $routeParams, $http, $filter, title, posts) {
-    var $current;
+function NotFoundCtrl ($scope, title) {
+    title.prependDefault('WHERE IS SHE!');
+}
 
+function PostCtrl ($scope, $routeParams, $http, $filter, title, posts) {
     $scope.nextPost = [];
     $scope.previousPost =  [];
 
     posts.success(function(data) {
-        $current = data.indexOf($filter('filter')(data , $routeParams.slug)[0]);
+        var $current = data.indexOf($filter('filter')(data , $routeParams.slug)[0]);
         title.prependDefault(data[$current].title);
         
         $scope.nextPost = data[$current + 1];
